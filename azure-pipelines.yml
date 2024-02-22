@@ -23,7 +23,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'Free Trial(27c2e3f9-b40e-4da9-95d8-ebfda85f9de6)'
+    backendServiceArm: 'azure_service_connection'
     backendAzureRmResourceGroupName: 'rg_container_registry'
     backendAzureRmStorageAccountName: 'ardhra1277'
     backendAzureRmContainerName: 'tfstate07'
@@ -33,14 +33,14 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'Free Trial(27c2e3f9-b40e-4da9-95d8-ebfda85f9de6)'
+    environmentServiceNameAzureRM: 'azure_service_connection'
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'Free Trial(27c2e3f9-b40e-4da9-95d8-ebfda85f9de6))'
+    environmentServiceNameAzureRM: 'azure_service_connection'
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
     command: 'destroy'
-    environmentServiceNameAzureRM: 'Free Trial(27c2e3f9-b40e-4da9-95d8-ebfda85f9de6)'
+    environmentServiceNameAzureRM: 'azure_service_connection'
